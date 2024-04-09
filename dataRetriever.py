@@ -15,7 +15,7 @@ class DataRetriever:
         return obj
 
     async def fetch_from_api(self):
-        pokemons= Pokemonapi.fetch_pokemons_range(0,5)
+        pokemons= Pokemonapi.fetch_pokemons_range()
         await self.save_to_db(pokemons)
         return pokemons
 
